@@ -11,7 +11,7 @@ Shipwreck is a small OS for x86 systems. It has basic ELF support, a basic shell
 - [Running](#running-heading)
 
 
-## About {: #about-heading }
+## <a name="about-heading"> About </a>
 This project was born out of an urge I had to build something complex from scratch. I've tinkered with OS dev in the past and wanted to build a new OS as a sort of exercise for myself. The name "Shipwreck" came from my fear of abandoning the project in some half-baked state but rather than abandon it I pruned down my goals a bit and wrapped it up.
 
 #### Goals:
@@ -28,19 +28,19 @@ This project was born out of an urge I had to build something complex from scrat
 1. It should have a GUI
 > This was the home stretch and a lot more fun than debugging triple-faults. Once all other parts were working to some extent (memory, events, scheduling, keyboard, video, mouse, etc) coding a basic GUI was easy. It just displays a kernel output window and the user shell window, you can drag them around and type in the shell.
 
-## Building {: #building-heading }
+## <a name="building-heading"> Building </a>
 
 The tool chain I use is fairly common among hobby OS devs (`cmake`, `clang` and `nasm`). The `build.sh` script runs these tools to build the OS and produces a Virtual Box VMDK disk file in the `build` directory.
 
 Because Shipwreck uses ELF objects and some fairly target-specific linker flags, the build works best natively on Linux. There are some tedious ways to cross-compile ELF binaries from a non-Linux host, but I decided the easiest way was to make a Docker image that resembles my Linux dev box with all the tools preinstalled.
 
-### Building natively on Linux: {: #building-linux-heading }
+### <a name="building-linux-heading"> Building natively on Linux: </a>
 
 ```
     shipwreck$ ./build.sh
 ```
 
-### Building through Docker: {: #building-docker-heading }
+### <a name="building-docker-heading"> Building through Docker: </a>
 
 First, build the Docker image from the project root:
 
@@ -58,7 +58,7 @@ When you launch the Docker container it will run `build.sh` to build the OS. The
 
 If all goes well to this point you should see the build steps scroll by and find a new `disk-flat.vmdk` file in `/build`.
 
-## Running {: #running-heading }
+## <a name="running-heading"> Running </a>
 
 I've only ever run Shipwreck in Oracle VirtualBox (at the time of writing I'm using VirtualBox version 5.04). I've used VMWare and Bochs for past projects, but the built-in debugger in VirtualBox really won me over.
 
