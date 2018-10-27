@@ -1,0 +1,24 @@
+# Disk DescriptorFile
+version=1
+CID=c82e3d3e
+parentCID=ffffffff
+createType="monolithicFlat"
+
+# Extent description
+RW 16777216 FLAT "./disk-flat.vmdk" 0
+
+# The disk Data Base 
+#DDB
+
+ddb.virtualHWVersion = "4"
+ddb.adapterType="ide"
+ddb.uuid.image="099678f3-f2ac-4117-885c-540f621cbb4e"
+ddb.uuid.parent="00000000-0000-0000-0000-000000000000"
+ddb.uuid.modification="00000000-0000-0000-0000-000000000000"
+ddb.uuid.parentmodification="00000000-0000-0000-0000-000000000000"
+ddb.geometry.cylinders="1"
+ddb.geometry.heads="16"
+ddb.geometry.sectors="63"
+ddb.geometry.biosCylinders="1"
+ddb.geometry.biosHeads="16"
+ddb.geometry.biosSectors="63"
